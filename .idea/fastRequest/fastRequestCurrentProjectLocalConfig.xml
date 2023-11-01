@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="fastRequestCurrentProjectLocalConfig">
+    <option name="cookieList">
+      <list>
+        <DataMapping>
+          <option name="type" value="bing.com" />
+          <option name="value" value="MUID=0AA982CEDA4C6C4A05E59172DB2A6D3B; domain, MUIDB=0AA982CEDA4C6C4A05E59172DB2A6D3B; expires, _EDGE_S=F, _EDGE_V=1; domain, SRCHD=AF, SRCHUID=V, SRCHUSR=DOB, SRCHHPGUSR=SRCHLANG, _SS=SID, ULC=; domain, _HPVN=CS" />
+        </DataMapping>
+      </list>
+    </option>
+    <option name="domain" value="bing.com" />
+    <option name="enableEnv" value="Env.1" />
+    <option name="enableProject" value="Proj.1" />
+    <option name="initFlag" value="1" />
+  </component>
+</project>
