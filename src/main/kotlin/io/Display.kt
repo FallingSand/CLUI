@@ -79,13 +79,24 @@ class Display(l: Lang) {
                 BackGround.White -> 47
             }
 
+
             val getAll: String = "\u001b[${
                 if (getTextAttr == 0 && getForeFront == null && getBackGround == null) "0m"
-                else if (getForeFront == null && getBackGround != null) "$getTextAttr;$getBackGround"
-                else if (getForeFront != null && getBackGround == null) "$getTextAttr;$getForeFront"
-                else if (getForeFront != null && getBackGround != null) "$getTextAttr;$getForeFront;$getBackGround"
-                else "$getTextAttr"
-            }"
+//                else if (getForeFront == null && getBackGround != null) "$getTextAttr;$getBackGround"
+//                else if (getForeFront != null && getBackGround == null) "$getTextAttr;$getForeFront"
+//                else if (getForeFront != null && getBackGround != null) "$getTextAttr;$getForeFront;$getBackGround"
+//                else "$getTextAttr"
+                else when {
+                    (getForeFront == null && getBackGround != null) ->
+                        "$getTextAttr;$getBackGround"
+                    (getForeFront != null && getBackGround == null) ->
+                        "$getTextAttr;$getForeFront"
+                    (getForeFront != null && getBackGround != null) ->
+                        "$getTextAttr;$getForeFront;$getBackGround"
+                    else ->
+                        "$getTextAttr"
+                }
+            };"
         }
     }
 
